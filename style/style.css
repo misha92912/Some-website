@@ -1,0 +1,97 @@
+.new-border {
+  border: 3px solid rgb(151, 0, 0);
+  border-end-end-radius: 15%;
+  border-end-start-radius: 2px;
+  border-top-left-radius: 15%;
+  border-top-right-radius: 2px;
+}
+
+input[type=submit].new-border, input[type=button].new-border, a.new-border, button.new-border {
+  overflow: hidden;
+  position: relative;
+  background: rgb(33, 37, 41);
+  color: white;
+  transition: 0.1s;
+}
+input[type=submit].new-border::before, input[type=button].new-border::before, a.new-border::before, button.new-border::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgb(0, 244, 77), transparent);
+  transform: translateX(-100%);
+}
+input[type=submit].new-border:hover, input[type=button].new-border:hover, a.new-border:hover, button.new-border:hover {
+  background: rgb(33, 37, 41);
+  font-weight: bold;
+  box-shadow: 0 0 10px 3px rgba(153, 0, 0, 0.5);
+}
+input[type=submit].new-border:hover::before, input[type=button].new-border:hover::before, a.new-border:hover::before, button.new-border:hover::before {
+  transform: translateX(100%);
+}
+input[type=submit].new-border:active, input[type=button].new-border:active, a.new-border:active, button.new-border:active {
+  background: rgb(33, 37, 41);
+  color: rgb(255, 0, 0);
+  transform: translateY(2px);
+  box-shadow: 0 1px 5px 3px rgba(153, 0, 0, 0.5);
+}
+
+/* 
+#######################################################
+############
+*/
+body {
+  font-size: 1.3em;
+  background-color: rgb(188, 188, 188);
+  font-family: "Inconsolata", monospace;
+}
+body h1, body h2, body h3 {
+  font-family: "Vast Shadow", cursive;
+}
+body.services main .row .col:hover {
+  text-shadow: 1px 1px red;
+}
+body.services .services-card:hover, body .prices-card:hover {
+  background-color: rgb(2, 2, 2);
+  text-shadow: 1px 1px red;
+}
+
+/* Inputs vs labels */
+body main a.new-border {
+  width: max-content;
+  min-height: 3em;
+  line-height: 3em;
+}
+
+input {
+  min-height: 3em;
+}
+
+::placeholder {
+  padding-left: 0.3em;
+  font-weight: bold;
+}
+
+/* ################################################ */
+.prices main .card span {
+  border-bottom: 2px solid rgb(151, 0, 0);
+}
+
+/* ################################################ */
+.home {
+  background-image: url(../images/Other/city1.jpg);
+  background-size: cover;
+}
+
+/* ################################################ */
+.services main .row .col .col_img img {
+  width: 100%;
+}
+
+.services main .row .col ol {
+  font-weight: normal;
+}
+
+/*# sourceMappingURL=style.css.map */
